@@ -147,7 +147,7 @@ function patch_system_files() {
 }
 
 function install_complete() {
-    install_log "Installation fert!"
+    install_log "Installation fertig!"
     
     echo -n "Jetzt neu starten? [y/N]: "
     read answer
