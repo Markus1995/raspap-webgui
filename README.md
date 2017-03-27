@@ -32,18 +32,18 @@ After you complete the intial setup, you'll be able to administer these services
 ## Quick installer
 Install RaspAP from your RaspberryPi's shell prompt:
 ```sh
-$ wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+$ wget -q https://raw.githubusercontent.com/markus1995/raspap-webgui/master/installers/raspbian.sh -O /tmp/raspap && bash /tmp/raspap
 ```
 The installer will complete the steps in the manual installation (below) for you.
 
 After the reboot at the end of the installation the wireless network will be
 configured as an access point as follows:
-* IP address: 10.3.141.1
+* IP address: 192.168.1.1
   * Username: admin
   * Password: secret
-* DHCP range: 10.3.141.50 to 10.3.141.255
+* DHCP range: 192.168.1.10 to 192.168.1.255
 * SSID: `raspi-webgui`
-* Password: ChangeMe
+* Password: 1234567890
 
 ## Manual installation
 Start off by installing lighttpd, php5, hostapd and dnsmasq.
