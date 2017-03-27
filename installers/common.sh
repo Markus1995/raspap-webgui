@@ -26,19 +26,19 @@ function install_error() {
 ### NOTE: some of the below functions MUST be overloaded due to system-specific installs
 
 function config_installation() {
-    install_log "Configure installation"
+    install_log "Installation konfigurieren"
     # This causes confusion. For the moment fix the default.
     #echo -n "Install directory [${raspap_dir}]: "
     #read input
     #if [ ! -z "$input" ]; then
     #    raspap_dir="$input"
     #fi
-    echo "Install directory: ${raspap_dir}"
+    echo "Installationspfad: ${raspap_dir}"
 
-    echo -n "Complete installation with these values? [y/N]: "
+    echo -n "Installation mit diesen Einstellungen fortsetzen? [y/N]: "
     read answer
     if [[ $answer != "y" ]]; then
-        echo "Installation aborted."
+        echo "Installation abgebrochen."
         exit 0
     fi
 }
@@ -57,7 +57,7 @@ function install_dependencies() {
 
 # Enables PHP for lighttpd and restarts service for settings to take effect
 function enable_php_lighttpd() {
-    install_log "Enabling PHP for lighttpd"
+    install_log "PHP für lighttpd aktivieren"
 
     sudo lighty-enable-mod fastcgi-php || install_error "Cannot enable fastcgi-php for lighttpd"
     sudo /etc/init.d/lighttpd restart || install_error "Unable to restart lighttpd"
@@ -65,7 +65,7 @@ function enable_php_lighttpd() {
 
 # Verifies existence and permissions of RaspAP directory
 function create_raspap_directories() {
-    install_log "Creating RaspAP directories"
+    install_log "Erstelle RasAP Verzeichnisse"
     if [ -d "$raspap_dir" ]; then
         sudo mv $raspap_dir $raspap_dir.original || install_error "Unable to move old '$raspap_dir' out of the way"
     fi
@@ -80,8 +80,8 @@ function download_latest_files() {
         sudo mv $webroot_dir $webroot.old || install_error "Unable to remove old webroot directory"
     fi
 
-    install_log "Cloning latest files from github"
-    git clone https://github.com/billz/raspap-webgui /tmp/raspap-webgui || install_error "Unable to download files from github"
+    install_log "Kopiere Dateien von GitHub"
+    git clone https://github.com/markus1995/raspap-webgui /tmp/raspap-webgui || install_error "Unable to download files from github"
     sudo mv /tmp/raspap-webgui $webroot_dir || install_error "Unable to move raspap-webgui to web root"
 }
 
@@ -108,7 +108,7 @@ function move_config_file() {
 
 # Set up default configuration
 function default_configuration() {
-    install_log "Setting up hostapd"
+    install_log "Konfiguriere hostadp"
     if [ -f /etc/default/hostapd ]; then
         sudo mv /etc/default/hostapd /tmp/default_hostapd.old || install_error "Unable to remove old /etc/default/hostapd file"
     fi
@@ -147,12 +147,12 @@ function patch_system_files() {
 }
 
 function install_complete() {
-    install_log "Installation completed!"
+    install_log "Installation fert!"
     
-    echo -n "The system needs to be rebooted as a final step. Reboot now? [y/N]: "
+    echo -n "Jetzt neu starten? [y/N]: "
     read answer
     if [[ $answer != "y" ]]; then
-        echo "Installation aborted."
+        echo "Installation abgebrochen."
         exit 0
     fi
     sudo shutdown -r now || install_error "Unable to execute shutdown"
