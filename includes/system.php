@@ -28,7 +28,7 @@ function RPiVersion() {
     'a21041' => 'a21041',
     '900092' => 'PiZero 1.2',
     '900093' => 'PiZero 1.3',
-    '9000C1' => 'PiZero W',
+    '0x9000C1' => 'PiZero W',
     'a02082' => 'Pi 3 Model B',
     'a22082' => 'Pi 3 Model B'
   );
@@ -101,11 +101,11 @@ function DisplaySystem(){
     <div class="col-md-6">
     <div class="panel panel-default">
     <div class="panel-body">
-      <h4>System Information</h4>
+      <h4>System Informationen</h4>
       <div class="info-item">Hostname</div> <?php echo $hostname ?></br>
-      <div class="info-item">Pi Revision</div> <?php echo RPiVersion() ?></br>
+      <div class="info-item">Pi Version</div> <?php echo RPiVersion() ?></br>
       <div class="info-item">Uptime</div>   <?php echo $uptime ?></br></br>
-      <div class="info-item">Memory Used</div>
+      <div class="info-item">benötigter Arbeitsspeicher</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $memused_status ?> progress-bar-striped active"
           role="progressbar"
@@ -113,7 +113,7 @@ function DisplaySystem(){
           style="width: <?php echo $memused ?>%;"><?php echo $memused ?>%
         </div>
         </div>
-      <div class="info-item">CPU Load</div>
+      <div class="info-item">CPU Last</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $cpuload_status ?> progress-bar-striped active"
           role="progressbar"
