@@ -3,13 +3,13 @@ wget -q ${UPDATE_URL}/installers/common.sh -O /tmp/raspapcommon.sh
 source /tmp/raspapcommon.sh && rm -f /tmp/raspapcommon.sh
 
 function update_system_packages() {
-    install_log "Updating sources"
-    sudo apt-get update || install_error "Unable to update package list"
+    install_log "Quellen aktualisieren"
+    sudo apt-get update || install_error "Fehler beim aktualisieren"
 }
 
 function install_dependencies() {
-    install_log "Installing required packages"
-    sudo apt-get install lighttpd php5-cgi git hostapd dnsmasq || install_error "Unable to install dependencies"
+    install_log "Installiere die benötigten Pakete"
+    sudo apt-get install lighttpd php5-cgi git hostapd dnsmasq || install_error "Fehler beim installieren"
 }
 
 install_raspap
