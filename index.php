@@ -150,8 +150,11 @@ $csrf_token = $_SESSION['csrf_token'];
                  <a href="index.php?page=system_info"><i class="fa fa-cube fa-fw"></i> System</a>
               </li>
               <li>
-   <a href="/" onclick="javascript:event.target.port=631"><i class="fa fa-dashboard fa-fw"></i>CUPS</a>
-</li>
+                  <a href="/" onclick="javascript:event.target.port=631"><i class="fa fa-dashboard fa-fw"></i>CUPS</a>
+              </li>
+              <li>
+                  <a href="/" onclick="javascript:event.target.port=4200"><i class="fa fa-dashboard fa-fw"></i>Shell</a>
+              </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.navbar-default -->
