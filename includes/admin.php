@@ -47,23 +47,23 @@ function DisplayAuthConfig($username, $password){
             </div>
             <div class="row">
               <div class="form-group col-md-4">
-                <label for="password">Old password</label>
+                <label for="password">Altes Passwort</label>
                 <input type="password" class="form-control" name="oldpass"/>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-md-4">
-                <label for="password">New password</label>
+                <label for="password">Neues Passwort</label>
                 <input type="password" class="form-control" name="newpass"/>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-md-4">
-                <label for="password">Repeat new password</label>
+                <label for="password">Neues Passwort wiederholen</label>
                 <input type="password" class="form-control" name="newpassagain"/>
               </div>
             </div>
-            <input type="submit" class="btn btn-outline btn-primary" name="UpdateAdminPassword" value="Save settings" />
+            <input type="submit" class="btn btn-outline btn-primary" name="Aktualisiere Admin Passwort" value="Save settings" />
           </form>
         </div><!-- /.panel-body -->
       </div><!-- /.panel-default -->
