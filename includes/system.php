@@ -8,7 +8,7 @@
 
 function RPiVersion() {
   // Lookup table from http://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/
-  $revisions = array(
+    $revisions = array(
     '0002' => 'Model B Revision 1.0',
     '0003' => 'Model B Revision 1.0 + ECN0001',
     '0004' => 'Model B Revision 2.0 (256 MB)',
@@ -28,7 +28,7 @@ function RPiVersion() {
     'a21041' => 'a21041',
     '900092' => 'PiZero 1.2',
     '900093' => 'PiZero 1.3',
-    '0x9000C1' => 'PiZero W',
+    '9000c1' => 'PiZero W',
     'a02082' => 'Pi 3 Model B',
     'a22082' => 'Pi 3 Model B'
   );
@@ -104,7 +104,7 @@ function DisplaySystem(){
       <h4>System Informationen</h4>
       <div class="info-item">Hostname</div> <?php echo $hostname ?></br>
       <div class="info-item">Pi Version</div> <?php echo RPiVersion() ?></br>
-      <div class="info-item">Uptime</div>   <?php echo $uptime ?></br></br>
+      <div class="info-item">Laufzeit</div>   <?php echo $uptime ?></br></br>
       <div class="info-item">benötigter Arbeitsspeicher</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $memused_status ?> progress-bar-striped active"
@@ -113,7 +113,7 @@ function DisplaySystem(){
           style="width: <?php echo $memused ?>%;"><?php echo $memused ?>%
         </div>
         </div>
-      <div class="info-item">CPU Last</div>
+      <div class="info-item">CPU-Last</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $cpuload_status ?> progress-bar-striped active"
           role="progressbar"
@@ -127,8 +127,8 @@ function DisplaySystem(){
     </div><!-- /.row -->
 
     <form action="?page=system_info" method="POST">
-      <input type="submit" class="btn btn-warning" name="system_reboot"   value="Reboot" />
-      <input type="submit" class="btn btn-warning" name="system_shutdown" value="Shutdown" />
+      <input type="submit" class="btn btn-warning" name="system_reboot"   value="Neustart" />
+      <input type="submit" class="btn btn-warning" name="system_shutdown" value="Herunterfahren" />
       <input type="button" class="btn btn-outline btn-primary" value="Refresh" onclick="document.location.reload(true)" />
     </form>
 
