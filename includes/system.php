@@ -105,7 +105,7 @@ function DisplaySystem(){
       <div class="info-item">Hostname</div> <?php echo $hostname ?></br>
       <div class="info-item">Pi Version</div> <?php echo RPiVersion() ?></br>
       <div class="info-item">Laufzeit</div>   <?php echo $uptime ?></br></br>
-      <div class="info-item">benötigter Arbeitsspeicher</div>
+      <div class="info-item">RAM-Auslastung</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $memused_status ?> progress-bar-striped active"
           role="progressbar"
@@ -113,7 +113,7 @@ function DisplaySystem(){
           style="width: <?php echo $memused ?>%;"><?php echo $memused ?>%
         </div>
         </div>
-      <div class="info-item">CPU-Last</div>
+      <div class="info-item">CPU-Auslastung</div>
         <div class="progress">
         <div class="progress-bar progress-bar-<?php echo $cpuload_status ?> progress-bar-striped active"
           role="progressbar"
