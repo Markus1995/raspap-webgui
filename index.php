@@ -155,6 +155,9 @@ $csrf_token = $_SESSION['csrf_token'];
               <li>
                   <a href="/" onclick="javascript:event.target.port=4200"><i class="fa fa-dashboard fa-fw"></i>Shell</a>
               </li>
+              <li>
+                  <a href="/" onclick="javascript:event.target.port=443/vnc.html?host=raspberrypi&port=443"><i class="fa fa-dashboard fa-fw"></i>noVNC</a>
+              </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.navbar-default -->
