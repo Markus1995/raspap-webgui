@@ -77,17 +77,17 @@ function DisplayDashboard(){
                         <div class="col-md-6">
                         <div class="panel panel-default">
                   <div class="panel-body">
-                      <h4>Interface Information</h4>
+                      <h4>Interface Informationen</h4>
           <div class="info-item">Interface Name</div> wlan0</br>
-          <div class="info-item">IP Address</div>     <?php echo $strIPAddress ?></br>
-          <div class="info-item">Subnet Mask</div>    <?php echo $strNetMask ?></br>
-          <div class="info-item">Mac Address</div>    <?php echo $strHWAddress ?></br></br>
+          <div class="info-item">IP-Addresse</div>     <?php echo $strIPAddress ?></br>
+          <div class="info-item">Subnet Maske</div>    <?php echo $strNetMask ?></br>
+          <div class="info-item">Mac Addresse</div>    <?php echo $strHWAddress ?></br></br>
 
-                      <h4>Interface Statistics</h4>
-          <div class="info-item">Received Packets</div>    <?php echo $strRxPackets ?></br>
-          <div class="info-item">Received Bytes</div>      <?php echo $strRxBytes ?></br></br>
-          <div class="info-item">Transferred Packets</div> <?php echo $strTxPackets ?></br>
-          <div class="info-item">Transferred Bytes</div>   <?php echo $strTxBytes ?></br>
+                      <h4>Interface Statistiken</h4>
+          <div class="info-item">Empfangene Pakete</div>    <?php echo $strRxPackets ?></br>
+          <div class="info-item">Empfangene Bytes</div>      <?php echo $strRxBytes ?></br></br>
+          <div class="info-item">Gesendete Packete</div> <?php echo $strTxPackets ?></br>
+          <div class="info-item">Gesendete Bytes</div>   <?php echo $strTxBytes ?></br>
         </div><!-- /.panel-body -->
         </div><!-- /.panel-default -->
                         </div><!-- /.col-md-6 -->
@@ -95,14 +95,14 @@ function DisplayDashboard(){
         <div class="col-md-6">
                     <div class="panel panel-default">
               <div class="panel-body wireless">
-                            <h4>Wireless Information</h4>
-          <div class="info-item">Connected To</div>   <?php echo $strSSID ?></br>
-          <div class="info-item">AP Mac Address</div> <?php echo $strBSSID ?></br>
+                            <h4>Wireless Informationen</h4>
+          <div class="info-item">Verbunden mit</div>   <?php echo $strSSID ?></br>
+          <div class="info-item">AP Mac Addresse</div> <?php echo $strBSSID ?></br>
           <div class="info-item">Bitrate</div>        <?php echo $strBitrate ?></br>
-          <div class="info-item">Signal Level</div>        <?php echo $strSignalLevel ?></br>
-          <div class="info-item">Transmit Power</div> <?php echo $strTxPower ?></br>
-          <div class="info-item">Frequency</div>      <?php echo $strFrequency ?></br></br>
-          <div class="info-item">Link Quality</div>
+          <div class="info-item">Signal Stärke</div>        <?php echo $strSignalLevel ?></br>
+          <div class="info-item">Übertragungsleistung</div> <?php echo $strTxPower ?></br>
+          <div class="info-item">Frequenz</div>      <?php echo $strFrequency ?></br></br>
+          <div class="info-item">Verbindungsqualität</div>
             <div class="progress">
             <div class="progress-bar progress-bar-info progress-bar-striped active"
               role="progressbar"
@@ -124,13 +124,13 @@ function DisplayDashboard(){
                 echo '<input type="submit" class="btn btn-warning" value="Stop wlan0" name="ifdown_wlan0" />';
               }
               ?>
-              <input type="button" class="btn btn-outline btn-primary" value="Refresh" onclick="document.location.reload(true)" />
+              <input type="button" class="btn btn-outline btn-primary" value="Aktualisieren" onclick="document.location.reload(true)" />
               </form>
             </div>
               </div>
 
                 </div><!-- /.panel-body -->
-                <div class="panel-footer">Information provided by ifconfig and iwconfig</div>
+                <div class="panel-footer">Informationen kommen von ifconfig und iwconfig</div>
             </div><!-- /.panel-default -->
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
